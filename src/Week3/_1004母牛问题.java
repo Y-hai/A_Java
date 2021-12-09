@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class _1004母牛问题 {
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    static int N = 60;
+    static final int N = 60;
     static int[] dp = new int[N];
 
     public static void main(String[] args) throws IOException {
