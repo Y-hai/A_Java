@@ -15,7 +15,7 @@ public class _2352数的划分 {
         String[] arr = in.readLine().split(" ");
         n = Integer.parseInt(arr[0]);
         k = Integer.parseInt(arr[1]);
-        q[0] = 1;   // 后面从大于等于1开始划分
+        q[0] = 1;   // 最小为1，从大于等于1开始划分
         dfs(1);   // 开始划分第一个数
         System.out.println(cnt);
     }

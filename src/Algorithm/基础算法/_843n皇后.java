@@ -1,18 +1,14 @@
-package 基础算法.DFS;
-
-import jdk.nashorn.internal.ir.LiteralNode;
+package Algorithm.基础算法;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.List;
 
-public class _842排列数字 {
-    static int N = 12;
+public class _843n皇后 {
+    static int N = 20;
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     static int n, cnt = 0;
-    static int[] q = new int[N];
-    static boolean[] st = new boolean[N];
+    static int q[] = new int[N];
 
     public static void main(String[] args) throws IOException {
         n = Integer.parseInt(in.readLine());
@@ -29,14 +25,18 @@ public class _842排列数字 {
             System.out.println();
             return;
         }
-
         for (int i = 1; i <= n; i++) {
-            if (!st[i]) {
+            if (check(u, i)) {
                 q[u] = i;
-                st[i] = true;
                 dfs(u + 1);
-                st[i] = false;
             }
         }
+    }
+
+    private static boolean check(int r, int c) {
+        for (int i = 1; i < r; i++)
+            if (q[i] == c || q[i] - c == i - r || i + q[i] == r + c)
+                return false;
+        return true;
     }
 }

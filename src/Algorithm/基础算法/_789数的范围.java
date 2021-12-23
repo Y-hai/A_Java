@@ -1,4 +1,4 @@
-package 基础算法.二分;
+package Algorithm.基础算法;
 
 import java.io.BufferedReader;
 import java.io.IOException;

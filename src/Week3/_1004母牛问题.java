@@ -10,7 +10,7 @@ public class _1004母牛问题 {
     static int[] dp = new int[N];
 
     public static void main(String[] args) throws IOException {
-        dp[1] = 1;
+        dp[1] = 1;  // 第一年1头牛
         dp[2] = 2;
         dp[3] = 3;
         // 动态规划求解，时间复杂度O(n)
