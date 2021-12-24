@@ -8,6 +8,7 @@ public class 动态链表 {
         reversenode(a);
     }
 
+    // 链表的反转
     static node reversenode(node head) {
         node prev = null;
         node curr = head;
