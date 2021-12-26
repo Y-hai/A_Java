@@ -14,7 +14,8 @@ public class 单调栈 {
         for (int i = 0; i < n; i++) {
             int x = Integer.parseInt(arr[i]);
             while (idx > 0 && q[idx - 1] >= x) idx--;
-            out.write((idx == 0 ? -1 : q[idx - 1]) + " ");
+            out.write(Integer.toString(idx == 0 ? -1 : q[idx - 1]));
+            out.write(" ");
             q[idx++] = x;
         }
         out.flush();

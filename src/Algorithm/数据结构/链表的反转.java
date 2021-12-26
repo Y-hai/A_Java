@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class 链表的反转 {
+    // 静态变量、代码块、编译的冗余部分、常量池在方法区
     static final int N = (int) 1e5 + 10;
     static int head, idx, e[] = new int[N], ne[] = new int[N];
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));

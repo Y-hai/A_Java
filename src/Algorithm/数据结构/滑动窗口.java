@@ -22,7 +22,10 @@ public class 滑动窗口 {
             if (hh < tt && q[hh] < i - k + 1) hh++; // 如果队列非空并且下标跨度过大
             while (hh < tt && a[q[tt - 1]] > a[i]) tt--; // 如果队列非空并且队尾元素大于下一个元素
             q[tt++] = i;
-            if (i >= k - 1) out.write(a[q[hh]] + " ");
+            if (i >= k - 1) {
+                out.write(Integer.toString(a[q[hh]]));
+                out.write(" ");
+            }
         }
         out.write('\n');
         hh = tt = 0;
@@ -31,8 +34,12 @@ public class 滑动窗口 {
             if (hh < tt && q[hh] < i - k + 1) hh++;
             while (hh < tt && a[q[tt - 1]] < a[i]) tt--;
             q[tt++] = i;
-            if (i >= k - 1) out.write(a[q[hh]] + " ");
+            if (i >= k - 1) {
+                out.write(Integer.toString(a[q[hh]]));
+                out.write(" ");
+            }
         }
         out.flush();
+        // 严格来说这道题用的数据结构不是队列
     }
 }

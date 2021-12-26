@@ -15,8 +15,8 @@ public class KMP {
         String b = in.readLine();
         char[] p = a.toCharArray();
         char[] s = b.toCharArray();
-        ne[0] = -1; // 最容易忽略的一步，可以从下标为0开始
-        // 预处理
+        ne[0] = -1; // 最容易忽略的一步，可以从下标为1开始
+        // 预处理，获得next数组
         for (int i = 1, j = -1; i < n; i++) {
             while (j != -1 && p[i] != p[j + 1]) j = ne[j];
             if (p[i] == p[j + 1]) j++;

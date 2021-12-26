@@ -31,7 +31,7 @@ public class Trie字符串统计 {
         }
         return cnt[p];
     }
-
+// length是对象头里的信息，访问并不需要花很多时间
     private static void insert(char[] a) {
         int p = 0;
         for (int i = 0; i < a.length; i++) {

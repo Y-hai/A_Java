@@ -8,6 +8,7 @@ public class 双链表 {
     static final int N = (int) 1e5 + 10;
     static int idx, e[] = new int[N], l[] = new int[N], r[] = new int[N];
 
+    // 先把队头队尾定义好
     static {
         idx = 2;
         r[0] = 1;
@@ -19,7 +20,7 @@ public class 双链表 {
         while (M-- != 0) {
             String[] arr = in.readLine().split(" ");
             int k, x;
-            // 1e5级别下switch比if else慢50ms，应该是JVM把switch优化成if else了
+            // 1e5级别switch比if else慢50ms，应该是JVM把switch优化成if else了
             switch (arr[0]) {
                 case "L":
                     x = Integer.parseInt(arr[1]);
@@ -51,9 +52,8 @@ public class 双链表 {
         out.flush();
     }
 
-    //先把结点创建出来，再调整指针
     private static void add(int k, int x) {
-        e[idx] = x;
+        e[idx] = x; //先把结点创建出来，再调整指针
         r[idx] = r[k];
         l[idx] = k;
         l[r[k]] = idx;

@@ -25,15 +25,16 @@ public class _5递增子序列 {
 
     static private void dfs(int[] q, int index, Stack<Integer> stack, int minn) {
         if (index == n) {
-            if (stack.size() >= 2) res.add(new ArrayList<>(stack));
+            if (stack.size() >= 2) res.add(new ArrayList<>(stack)); // 不能直接追加sack
             return;
         }
-        if (q[index] >= minn) { //选择nums[index]
+        //选择nums[index]
+        if (q[index] >= minn) {
             stack.push(q[index]);
             dfs(q, index + 1, stack, q[index]);
             stack.pop();
         }
-
+        // 第一个选了，第二个不能不选(就是说必须选，不然会重复)
         if (q[index] != minn) dfs(q, index + 1, stack, minn);
     }
 }
