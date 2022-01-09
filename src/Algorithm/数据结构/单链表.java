@@ -29,7 +29,8 @@ public class 单链表 {
             }
         }
         for (int i = head; i != -1; i = ne[i]) {
-            out.write(e[i] + " ");
+            out.write(String.valueOf(e[i]));
+            out.write(" ");
         }
         out.flush();
     }

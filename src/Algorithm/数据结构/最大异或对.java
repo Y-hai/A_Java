@@ -22,7 +22,7 @@ public class 最大异或对 {
         for (int i = 0; i < n; i++) {
             res = Math.max(search(q[i]), res);
         }
-        out.write(Integer.toString(res));
+        out.write(String.valueOf(res));
         out.flush();
     }
 

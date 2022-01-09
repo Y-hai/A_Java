@@ -23,8 +23,8 @@ public class 连通块中点的数量 {
                 case "C":
                     a = Integer.parseInt(arr[1]);
                     b = Integer.parseInt(arr[2]);
-                    if (find(a) != find(b)) { // 每次使用find(x)都是一种路径压缩
-                        // 下面这两行代码不能交换顺序
+                    if (find(a) != find(b)) {
+                        // 次使用find(x)都是一种路径压缩，下面这两行代码不能交换顺序
                         cnt[find(b)] += cnt[find(a)];
                         q[find(a)] = find(b);
                     }

@@ -26,7 +26,7 @@ public class JDBCtest {
             stmt = conn.createStatement();
 
             // 4、执行sql
-            String sql = "insert into aaa(name) values('yh')"; // 注意结尾不要写分号
+            String sql = "insert into aaa.properties(name) values('yh')"; // 注意结尾不要写分号
             String sql1 = "select empno, ename, sal from emp order by sal asc";
 //            int num = stmt.executeUpdate(sql); // 专门执行DML语句
 //            System.out.println(num == 1 ? "保存成功" : "保存失败");

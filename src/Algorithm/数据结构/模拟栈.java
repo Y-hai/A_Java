@@ -25,7 +25,7 @@ public class 模拟栈 {
                     out.write('\n');
                     break;
                 case "query":
-                    out.write(Integer.toString(q[idx - 1]));
+                    out.write(String.valueOf(q[idx - 1]));
                     out.write('\n');
                     break;
             }

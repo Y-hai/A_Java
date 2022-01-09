@@ -47,7 +47,8 @@ public class 双链表 {
             }
         }
         for (int i = r[0]; i != 1; i = r[i]) {
-            out.write(e[i] + " ");
+            out.write(String.valueOf(e[i]));
+            out.write(" ");
         }
         out.flush();
     }

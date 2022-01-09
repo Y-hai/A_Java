@@ -25,13 +25,13 @@ public class 食物链 {
             }
             int pb = find(b), pc = find(c);
             if (a == 1) {
-                if (pb == pc && (d[b] - d[c]) % 3 != 0) cnt++;
-                else if (pb != pc) {
+                if (pb == pc && (d[b] - d[c]) % 3 != 0) cnt++; // 在同一个集合中
+                else if (pb != pc) {    // 不在一个集合，还没有关系
                     q[pb] = pc;
                     d[pb] = d[c] - d[b];
                 }
             } else {
-                if (pb == pc && (d[b] - d[c] - 1) % 3 != 0) cnt++;
+                if (pb == pc && (d[b] - d[c] - 1) % 3 != 0) cnt++; // 在同一个集合中
                 else if (pb != pc) {
                     q[pb] = pc;
                     d[pb] = d[c] + 1 - d[b];
