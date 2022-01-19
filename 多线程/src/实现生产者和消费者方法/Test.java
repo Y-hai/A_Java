@@ -33,7 +33,7 @@ class Producer implements Runnable {
         while (true) {
             // 给仓库对象加锁
             synchronized (list) {
-                if (list.size() >= 10) {
+                if (list.size() >= 1) {
                     // 仓库已经满了，生产线程进入等待状态
                     try {
                         list.wait();
