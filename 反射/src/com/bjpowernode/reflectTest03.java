@@ -12,7 +12,9 @@ public class reflectTest03 {
          * getContextClassLoader() // 是线程对象的方法，可以获取到当前线程的类加载器对象
          * getResource() // 这是类加载器对象的方法，当前线程的类加载器默认从类的根路径下加载资源
          */
+        // 第一种
 //        BufferedReader br = new BufferedReader(new FileReader("反射/src/test.properties"));
+        // 第二种
 //        InputStream reader = Thread.currentThread().getContextClassLoader().
 //                getResourceAsStream("test.properties");
         /**

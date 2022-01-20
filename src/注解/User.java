@@ -3,7 +3,7 @@ package 注解;
 
 @Id
 public class User {
-    int id;
+//    int id;
     String name;
     String password;
 }
