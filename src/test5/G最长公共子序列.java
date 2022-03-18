@@ -17,6 +17,7 @@ public class G最长公共子序列 {
         int len2 = Integer.parseInt(str[1]);
         StringBuilder s1 = new StringBuilder(in.readLine());
         StringBuilder s2 = new StringBuilder(in.readLine());
+        // 让字符串下标从1开始
         s1.insert(0, " ");
         s2.insert(0, " ");
 

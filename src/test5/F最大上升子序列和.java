@@ -13,13 +13,14 @@ public class F最大上升子序列和 {
     public static void main(String[] args) throws IOException {
         n = Integer.parseInt(in.readLine());
         String[] str = in.readLine().split(" ");
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++)
             w[i] = Integer.parseInt(str[i - 1]);
-        }
+
         int ans = init();
         out.write(String.valueOf(ans));
         out.flush();
     }
+
     // f[i]代表所有以w[i]结尾的上升子序列的和的最大值
     private static int init() {
         int max = 0;
